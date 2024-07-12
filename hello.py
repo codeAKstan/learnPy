@@ -1,6 +1,5 @@
-import math_operations
+from shapes import circle
 
-print(math_operations.add(4, 5))
-print(math_operations.sub(5, 8))
-print(math_operations.mul(4, 5))
-print(math_operations.div(9, 3))
+print(f"area of a circle with radius 5 is {circle.area(5)}")
+
+print(f"circumference of a circle with radius 5 is {circle.circumference(5)}")
