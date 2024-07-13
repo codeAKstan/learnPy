@@ -1,5 +1,4 @@
-from shapes import circle
+from utilities import string_utils
 
-print(f"area of a circle with radius 5 is {circle.area(5)}")
-
-print(f"circumference of a circle with radius 5 is {circle.circumference(5)}")
+print(string_utils.vowel_count("HOW are you?"))
+print(string_utils.reverse_string("Animal"))
