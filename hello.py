@@ -1,4 +1,7 @@
-from utilities import string_utils
+import math
+from utilities import number_utils
+# using standard module
+print(f"standard: {math.factorial(3)}")
 
-print(string_utils.vowel_count("HOW are you?"))
-print(string_utils.reverse_string("Animal"))
+# using my defined module and package
+print(f"defined: {number_utils.fact(3)}")
