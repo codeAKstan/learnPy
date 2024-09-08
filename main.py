@@ -1,12 +1,16 @@
-from shapes.circle import Circle
-from shapes.rectangle import Rectangle
+class Bird:
+    def speak(self):
+        return f'Chirp'
+    
+class Duck(Bird):
+    def speak(self):
+        return f'quack'
+    
+def bird_speak(animal):
+    print(animal.speak())
 
-def calArea(shape):
-    print(shape.area())
+my_bird = Bird()
+my_duck = Duck()
 
-
-rec = Rectangle(3, 4)
-cir = Circle(5)
-
-calArea(rec)
-calArea(cir)
+bird_speak(my_bird)
+bird_speak(my_duck)
