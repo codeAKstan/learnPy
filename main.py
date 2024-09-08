@@ -1,15 +1,12 @@
-from vehicle import Vehicle
+from shapes.circle import Circle
+from shapes.rectangle import Rectangle
 
-class Car(Vehicle):
-    
-    def __init__(self, make, model, doornum):
-        super().__init__(make, model)
-        self.doornum = doornum
+def calArea(shape):
+    print(shape.area())
 
-    def details(self):
-        return f'the vehicles make is {self.make} with model {self.model} it has {self.doornum} doors'
-    
 
-mycar = Car('camry', '417', 67)
+rec = Rectangle(3, 4)
+cir = Circle(5)
 
-print(mycar.details())
+calArea(rec)
+calArea(cir)
