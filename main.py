@@ -1,16 +1,9 @@
-class Bird:
-    def speak(self):
-        return f'Chirp'
-    
-class Duck(Bird):
-    def speak(self):
-        return f'quack'
-    
-def bird_speak(animal):
-    print(animal.speak())
+def countdown(num):
+    print("counting down")
 
-my_bird = Bird()
-my_duck = Duck()
+    while num > 0:
+        yield num
+        num -= 1
 
-bird_speak(my_bird)
-bird_speak(my_duck)
+for i in countdown(7):
+    print(i)
