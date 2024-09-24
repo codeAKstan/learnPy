@@ -1,9 +1,7 @@
-def countdown(num):
-    print("counting down")
+import re
+def validate_email(email):
+    pattern = r'^[a-zA-Z][\w\.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$'
+    return bool(re.match(pattern, email))
 
-    while num > 0:
-        yield num
-        num -= 1
-
-for i in countdown(7):
-    print(i)
+print(validate_email('tes.t@example.com'))
+print(validate_email('invalid-email')) 
