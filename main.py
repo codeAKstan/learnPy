@@ -1,7 +1,17 @@
-import re
-def validate_email(email):
-    pattern = r'^[a-zA-Z][\w\.]+@[a-zA-Z]+\.[a-zA-Z]{2,}$'
-    return bool(re.match(pattern, email))
+import requests
 
-print(validate_email('tes.t@example.com'))
-print(validate_email('invalid-email')) 
+url = 'https://jsonplaceholder.typicode.com/posts'
+data = {
+    'title': 'My Post',
+    'body': 'This is the body of the post',
+    'userId': 1
+}
+
+response = requests.post(url, json=data)
+
+# Check if the POST request was successful
+if response.status_code == 201:
+    print("Data successfully sent!")
+    print(response.json())  
+else:
+    print("Failed to send data")
