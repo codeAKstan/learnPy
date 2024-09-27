@@ -1,18 +1,13 @@
-import requests
+def fib(n):
+    a, b = 0, 1
+    fib_seq = [a, b]
 
-url = 'https://jsonplaceholder.typicode.com/posts'
+    while len(fib_seq) < n:
+        next = a + b
+        fib_seq.append(next)
+        a, b = b, next
+
+    return fib_seq
 
 
-new_post = {
-    'title': "project",
-    'body': "this is my project body",
-    'userId': 2
-}
-response = requests.post(url, json=new_post)
-
-if response.status_code == 201:
-    print("this is a new post")
-    print(response.json())
-
-else:
-    print("failed")
+print(fib(10))
