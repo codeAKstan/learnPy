@@ -1,17 +1,14 @@
 import requests
 
-url = 'https://jsonplaceholder.typicode.com/posts'
-data = {
-    'title': 'My Post',
-    'body': 'This is the body of the post',
-    'userId': 1
-}
+url = 'https://jsonplaceholder.typicode.com/users'
 
-response = requests.post(url, json=data)
+response = requests.get(url)
 
-# Check if the POST request was successful
-if response.status_code == 201:
-    print("Data successfully sent!")
-    print(response.json())  
+if response.status_code == 200:
+    users = response.json()
+    for user in users:
+        print(f'name: {user["name"]}')
+        print(f"email: {user['email']}")
+
 else:
-    print("Failed to send data")
+    print("error")
