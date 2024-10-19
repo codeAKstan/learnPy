@@ -1,10 +1,9 @@
-def even_numbers(n):
-    a = 1
-    while a < n:
-        if a % 2 == 0:
-            yield a
-        a += 1
+fnum = float(input("enter first num "))
+snum = float(input("enter second number "))
 
+sum = fnum + snum
+diff = fnum - snum
+prod = fnum * snum
+qout = fnum / snum
 
-for i in even_numbers(10):
-    print(i)
+print(f'sum: {sum} \n difference: {diff} \n product:{prod} \n qoutient:{qout}')
