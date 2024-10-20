@@ -1,4 +1,16 @@
-num = int(input("Enter a no: "))
+import random
 
-for i in range(1, 11):
-    print(f'{num} x {i} = {num * i}')
+number = random.randint(1, 100)
+
+while True:
+    try:
+        guess = int(input("Guess the number: "))
+        if guess > number:
+            print("Your guess is too high.")
+        elif guess < number:
+            print("Your guess is too low.")
+        else:
+            print("Correct! The number was", number)
+            break
+    except ValueError:
+        print("Please enter a valid number.")
