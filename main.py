@@ -1,8 +1,17 @@
-from my_module import fahrenheit_to_celsius, factorial
+import calculator
 
-# temp_f = float(input("Enter a temp in fahrenheit: "))
-# temp_c = fahrenheit_to_celsius(temp_f)
-# print(f'{temp_f} F is {temp_c} C')
+num1 = float(input("Enter first no: "))
+num2 = float(input("enter second no: "))
 
-num = int(input("Enter a no to calc its factorial: "))
-print(factorial(num))
+operation = input("choose an operation (+, -, *, /) ")
+
+if operation == '+':
+    print(f'Result: {calculator.add(num1, num2)}')
+elif operation == '-':
+    print(f'Result: {calculator.sub(num1, num2)}')
+elif operation == '*':
+    print(f'Result: {calculator.mul(num1, num2)}')
+elif operation == '/':
+    print(f'Result: {calculator.div(num1, num2)}')
+else:
+    print("Invalid operator")
