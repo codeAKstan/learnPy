@@ -1,17 +1,12 @@
-import calculator
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-num1 = float(input("Enter first no: "))
-num2 = float(input("enter second no: "))
+    def bark(self):
+        return f'{self.name} is barking woof woof'
 
-operation = input("choose an operation (+, -, *, /) ")
 
-if operation == '+':
-    print(f'Result: {calculator.add(num1, num2)}')
-elif operation == '-':
-    print(f'Result: {calculator.sub(num1, num2)}')
-elif operation == '*':
-    print(f'Result: {calculator.mul(num1, num2)}')
-elif operation == '/':
-    print(f'Result: {calculator.div(num1, num2)}')
-else:
-    print("Invalid operator")
+dog1 = Dog('bingo', 12)
+print(dog1.bark())
+print(f'{dog1.name} is {dog1.age} years old')
