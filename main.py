@@ -1,15 +1,17 @@
-class Animal:
-    def __init__(self, name):
-        self.name = name
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
 
     @staticmethod
-    def sound(self):
-        return "some sound"
+    def start():
+        return "car is starting"
 
-class Dog(Animal):
-    def sound(self):
-        return "bark"
+    def info(self):
+        return f'make is {self.make}, with model {self.model} made in the year {self.year}'
 
 
-dog = Dog("bingo")
-print(dog.sound())
+car = Car('mercedes', 'glk', 2014)
+print(car.start())
+print(car.info())
