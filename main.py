@@ -1,17 +1,13 @@
-class Car:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
-    @staticmethod
-    def start():
-        return "car is starting"
+    def area(self):
+        return self.width * self.height
+    def perimeter(self):
+        return 2 * self.width * self.height
 
-    def info(self):
-        return f'make is {self.make}, with model {self.model} made in the year {self.year}'
-
-
-car = Car('mercedes', 'glk', 2014)
-print(car.start())
-print(car.info())
+rect = Rectangle(5, 8)
+print(rect.area())
+print(rect.perimeter())
