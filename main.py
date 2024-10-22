@@ -1,12 +1,15 @@
-class Dog:
-    def __init__(self, name, age):
+class Animal:
+    def __init__(self, name):
         self.name = name
-        self.age = age
 
-    def bark(self):
-        return f'{self.name} is barking woof woof'
+    @staticmethod
+    def sound(self):
+        return "some sound"
+
+class Dog(Animal):
+    def sound(self):
+        return "bark"
 
 
-dog1 = Dog('bingo', 12)
-print(dog1.bark())
-print(f'{dog1.name} is {dog1.age} years old')
+dog = Dog("bingo")
+print(dog.sound())
