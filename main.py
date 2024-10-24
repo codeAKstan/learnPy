@@ -20,8 +20,4 @@ class BankAccount:
         return f'Your account balance is {self.__account_balance}'
 
 bank = BankAccount()
-dep_amt = float(input("Enter the amount you want to deposit "))
-with_amt = float(input("Enter the amount to withdraw "))
-print(bank.deposit(dep_amt))
-print(bank.withdraw(with_amt))
-print(bank.check_balance())
+
