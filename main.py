@@ -1,23 +1,21 @@
-class BankAccount:
-    def __init__(self, account_balance=1000):
-        self.__account_balance = account_balance
+class Animal:
+    @staticmethod
+    def make_sound():
+        print("Animal sound")
 
-    def deposit(self, amount):
-        if amount <= 0:
-            return "Amount must be greater than 0"
-        self.__account_balance += amount
-        return f'deposited {amount}'
 
-    def withdraw(self, amount):
-        if amount <= 0:
-            return "amount must be greater than 0"
-        if amount > self.__account_balance:
-            return "Insufficient balance"
-        self.__account_balance -= amount
-        return f'withdrew {amount}'
+class Dog(Animal):
+    def make_sound(self):
+        print("bark")
 
-    def check_balance(self):
-        return f'Your account balance is {self.__account_balance}'
+class Cat(Animal):
+    def make_sound(self):
+        print("Meow")
 
-bank = BankAccount()
+animal = Animal()
+dog = Dog()
+cat = Cat()
 
+cat.make_sound()
+dog.make_sound()
+animal.make_sound()
