@@ -1,21 +1,14 @@
-class Animal:
-    @staticmethod
-    def make_sound():
-        print("Animal sound")
+import csv
 
+# Writing to a CSV file
+with open("data.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Name", "Age", "City"])
+    writer.writerow(["Alice", 25, "New York"])
+    writer.writerow(["Bob", 30, "San Francisco"])
 
-class Dog(Animal):
-    def make_sound(self):
-        print("bark")
-
-class Cat(Animal):
-    def make_sound(self):
-        print("Meow")
-
-animal = Animal()
-dog = Dog()
-cat = Cat()
-
-cat.make_sound()
-dog.make_sound()
-animal.make_sound()
+# Reading from a CSV file
+with open("data.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
