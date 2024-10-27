@@ -1,8 +1,3 @@
-try:
-    file_name = input("Enter file name: ")
-    with open(file_name, 'r') as file:
-        content = file.read()
-        print(content)
-except FileNotFoundError:
-    print("File not found")
-
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x ** 2, numbers))
+print(squared)
