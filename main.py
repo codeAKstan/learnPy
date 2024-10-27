@@ -1,3 +1,2 @@
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(lambda x: x ** 2, numbers))
-print(squared)
+squares = (x**2 for x in range(5))
+print(list(squares))
