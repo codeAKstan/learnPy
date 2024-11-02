@@ -1,4 +1,9 @@
-from mypackage.shape import Circle
+import json
 
-circle = Circle(5)
-print(circle.area())
+data = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+json_data = json.dumps(data)
+print(json_data)
