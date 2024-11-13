@@ -1,21 +1,10 @@
-import unittest
+import sched
+import time
 
-class TestStringMethods(unittest.TestCase):
+def my_task():
+    print("Task executed")
 
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
 
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
-
-    def test_split(self):
-        s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
-        with self.assertRaises(TypeError):
-            s.split(2)
-
-if __name__ == '__main__':
-    unittest.main()
-
-# run using python -m unittest test_module
+scheduler = sched.scheduler(time.time, time.sleep)
+scheduler.enter(10, 1, my_task)
+scheduler.run()
